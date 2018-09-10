@@ -39,17 +39,20 @@ func challenge14(input: String, current: String = "") {
         print(current)
         print("******")
     } else {
-        print(current)
+        print("current: \(current)")
         
         for i in 0 ..< length {
             let left = String(strArray[0 ..< i])
             let right = String(strArray[i + 1 ..< length])
+            
+            print("left: \(left)")
+            print("right: \(right)")
             
             challenge14(input: left + right, current: current + String(strArray[i]))
         }
     }
 }
 
-challenge14(input: "a")
-challenge14(input: "ab")
+//challenge14(input: "a")
+//challenge14(input: "ab")
 challenge14(input: "abc")

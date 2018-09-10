@@ -14,3 +14,12 @@ import UIKit
  The string “The quick brown fox” should return “ehT kciuq nworb xof”.”
 
  */
+
+func challenge15(input: String) -> String {
+    let parts = input.components(separatedBy: " ")
+    let reversed = parts.map { String($0.reversed()) }
+    return reversed.joined(separator: " ")
+}
+
+assert(challenge15(input: "Swift Coding Challenges") == "tfiwS gnidoC segnellahC", "Challenge failed")
+assert(challenge15(input: "The quick brown fox") == "ehT kciuq nworb xof", "Challenge failed")
